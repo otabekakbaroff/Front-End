@@ -44,10 +44,22 @@ const [query, setQuery] = useState("");
 
       {console.log("~", data)}
       {data.map(item => (
-        <div style={{border : '1px solid red', margin: '50px'}}>
-          {item.gender}
-          <img alt={item.name.first} src={item.picture.large} style={{borderRadius: '50%' }}/>
+          <>
+        <div style={{border : '1px solid red', margin: '50px', display: 'flex'}}>
+                      <img alt={item.name.first} src={item.picture.large} style={{borderRadius: '50%' }}/>
+
+          <h2>{item.name.first} {item.name.last}</h2>
+          <p>{item.gender}</p> {/*change to Profession */}
+          <h3>Cards</h3>
+          {item.id.value || 'something' }
         </div>
+        <div>
+            <a href="">Phone</a>
+            <a href="">Email</a>
+            <a href="">Globe</a>
+            </div>
+            </>
+        
       ))}
     </div>
   );
