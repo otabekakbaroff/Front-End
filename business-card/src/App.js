@@ -15,7 +15,8 @@ function App() {
               <Link to="/signUp">Sign Up  </Link> 
               <Link to="/privateRoute">Private Route </Link>
           </div>
-          <Switch>
+          <BusinessCard />
+          {/* <Switch>
           <Route exact path="/">
             <h1>Business Card Organizer</h1>
             <h3>Home Page</h3>
@@ -23,7 +24,7 @@ function App() {
           <Route path="/login" component={Login}/>
           <Route path="/signUp" component={SignUp}/>
           <PrivateRoute path="/PrivateRoute" component={BusinessCard}/>
-        </Switch>
+        </Switch> */}
       </Router>
     </div>
   );
