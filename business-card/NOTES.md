@@ -5,7 +5,7 @@ User activity will be posted into notification including:
 -Those that like, grab user card
 -User changes profile information (each user has ability to mute)
 
-//Things that MIGHT need to be tracked 
+//Things that MIGHT need to be tracked ---possible Stretch
 *posts
 *posts likes
 *posts comments
