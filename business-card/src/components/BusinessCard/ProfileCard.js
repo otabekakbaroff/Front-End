@@ -1,7 +1,16 @@
 import React, {useState, useEffect} from 'react';
+import {Route, Link } from 'react-router-dom'
 import axios from 'axios';
 
-
+const Call = (props) => {
+    return(<h2>Call this number</h2>)
+}
+const Email = (props) => {
+    return(<h2>Email me here</h2>)
+}
+const Website = (props) => {
+    return(<h2>This is my site</h2>)
+}
 export default function ProfileCard(){
 const [data, setData] = useState([]);
 const [query, setQuery] = useState("");
@@ -51,13 +60,25 @@ const [query, setQuery] = useState("");
           <h2>{item.name.first} {item.name.last}</h2>
           <p>{item.gender}</p> {/*change to Profession */}
           <h3>Cards</h3>
-          {item.id.value || 'something' }
+          {item.id.value || 'something' } {/*change to amount of card from user */}
         </div>
-        <div>
-            <a href="">Phone</a>
-            <a href="">Email</a>
-            <a href="">Globe</a>
+        <div style={{border : '1px solid red', margin: '50px'}}>
+            <Link to="/my-phone">Phone</Link>
+            <Link to='/my-email'>Email</Link>
+            <Link to='/my-site'>Globe</Link>
             </div>
+            <Route path={`/my-phone`}>
+        {/*dynamic path */}
+        <Call/>
+      </Route>
+      <Route path={`/my-email`}>
+        {/*dynamic path */}
+        <Email/>
+      </Route>
+      <Route path={`/my-site`}>
+        {/*dynamic path */}
+        <Website/>
+      </Route>
             </>
         
       ))}

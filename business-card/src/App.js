@@ -24,6 +24,7 @@ function App() {
           <Route path="/login" component={Login}/>
           <Route path="/signUp" component={SignUp}/>
           <PrivateRoute path="/PrivateRoute" component={BusinessCard}/>
+         <Route path="/login" component={Login}/>
         </Switch> */}
       </Router>
     </div>
