@@ -2,6 +2,7 @@ import React from 'react';
 import ProfileCard from './ProfileCard';
 import Notification from './Notification';
 import Articles from './Articles';
+import QRCard from './QRCard';
 
 
 export default function BusinessCard(){
@@ -12,6 +13,7 @@ export default function BusinessCard(){
         <h1>PrivateRoute</h1>
         <ProfileCard /> {/*Needs API data */}
         <Notification /> {/*Needs API data */}
+        <QRCard />
         <Articles />
         </>
     )
