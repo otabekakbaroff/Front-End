@@ -62,10 +62,13 @@ const [query, setQuery] = useState("");
           <h3>Cards</h3>
           {item.id.value || 'something' } {/*change to amount of card from user */}
         </div>
-        <div style={{border : '1px solid red', margin: '50px'}}>
-            <Link to="/my-phone">Phone</Link>
-            <Link to='/my-email'>Email</Link>
-            <Link to='/my-site'>Globe</Link>
+        <div style={{border : '1px solid red', display: 'inline-flex'}}>
+            <li><Link to="/my-phone">Phone</Link></li>
+            <li><Link to='/my-email'>Email</Link></li>
+            <li><Link to='/my-site'>Globe</Link></li>
+            
+            
+            
             </div>
             <Route path={`/my-phone`}>
         {/*dynamic path */}
