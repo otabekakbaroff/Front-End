@@ -41,11 +41,16 @@ const [query, setQuery] = useState("");
           placeholder="search by name"
         />
       </form>
+<div style={{
 
+    flexGrow: 0,
+    display: 'flex',
+    flexWrap: 'wrap'
+}}>
       {console.log("~", data)}
       {data.map(item => (
-          <div style={{display: 'inline-flex'}}>
-        <div style={{background : 'tomato', margin: '50px', width: '350px', height: '200px'}}>
+        //   <div style={{display: 'inline-flex'}}>
+        <div style={{background : 'tomato', margin: '20px', width: '350px', height: '200px'}}>
                       <img alt={item.name.first} src={item.picture.thumbnail} style={{width: '50px', height: '50px'}}/>
 
           <h2>{item.name.first} {item.name.last}</h2>
@@ -54,9 +59,10 @@ const [query, setQuery] = useState("");
           <p>Cell: {item.cell}</p>
         </div>
 
-            </div>
+            // </div>
         
       ))}
+    </div>
     </div>
   );
 }

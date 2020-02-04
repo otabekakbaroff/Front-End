@@ -54,7 +54,7 @@ const [query, setQuery] = useState("");
       {console.log("~", data)}
       {data.map(item => (
           <>
-        <div style={{border : '1px solid red', margin: '50px', display: 'flex'}}>
+        <div style={{border : '1px solid red', margin: '50px', /*display: 'flex'*/}}>
                       <img alt={item.name.first} src={item.picture.large} style={{borderRadius: '50%' }}/>
 
           <h2>{item.name.first} {item.name.last}</h2>
