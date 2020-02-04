@@ -49,8 +49,6 @@ export default function BusinessCard(){
         <QRCard />
         <Articles />
         </div>
-        {/* <Route exact path={"/allusercards"} component={AllUsersCard}/> */}
-
         </div>
         
     )
