@@ -4,6 +4,7 @@ import Login from './components/Login/Login';
 import SignUp from './components/SignUp/SignUp';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import BusinessCard from './components/BusinessCard/BusinessCard'
+import AllUsersCards from './components/BusinessCard/AllUsersCard'
 import {BrowserRouter as Router, Route, Switch,Link} from 'react-router-dom';
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
               <Link to="/">Home </Link>
               <Link to="/login">Login </Link> 
               <Link to="/signUp">Sign Up  </Link> 
+              <Link to="/allusercards">All User Cards </Link> 
               <Link to="/privateRoute">Private Route </Link>
           </div>
-          <BusinessCard />
-          {/* <Switch>
+          {/* <BusinessCard /> */}
+          <Switch>
           <Route exact path="/">
             <h1>Business Card Organizer</h1>
             <h3>Home Page</h3>
@@ -25,7 +27,10 @@ function App() {
           <Route path="/signUp" component={SignUp}/>
           <PrivateRoute path="/PrivateRoute" component={BusinessCard}/>
          <Route path="/login" component={Login}/>
-        </Switch> */}
+                  <Route exact path="/allusercards" component={AllUsersCards}/>
+
+        </Switch>
+         {/* <Route exact path="/allusercards" component={AllUsersCards}/> */}
       </Router>
     </div>
   );

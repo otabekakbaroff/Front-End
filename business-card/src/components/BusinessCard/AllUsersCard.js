@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Route, Link } from 'react-router-dom'
 import axios from 'axios';
 
-export default function AllCards(){
+export default function AllUsersCards(){
 const [data, setData] = useState([]);
 const [query, setQuery] = useState("");
 
@@ -12,7 +12,7 @@ const [query, setQuery] = useState("");
 
   useEffect(() => {
     axios
-      .get(`https://randomuser.me/api/1.0/?results=5&seed=may`)
+      .get(`https://randomuser.me/api/1.0/?results=30&seed=may`)
       .then(res => {
         const profiles = res.data.results.filter(
           c =>
@@ -42,6 +42,7 @@ const [query, setQuery] = useState("");
         />
       </form>
 <div style={{
+    justifyContent: 'center',
     flexGrow: 0,
     display: 'flex',
     flexWrap: 'wrap'
