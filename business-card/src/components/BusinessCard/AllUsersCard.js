@@ -49,8 +49,9 @@ const [query, setQuery] = useState("");
 }}>
       {console.log("~", data)}
       {data.map(item => (
-        //   <div style={{display: 'inline-flex'}}>
+        
         <div style={{background : 'tomato', margin: '20px', width: '350px', height: '200px'}}>
+            
                       <img alt={item.name.first} src={item.picture.thumbnail} style={{width: '50px', height: '50px'}}/>
 
           <h2>{item.name.first} {item.name.last}</h2>
