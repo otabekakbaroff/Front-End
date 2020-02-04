@@ -28,6 +28,10 @@ const [query, setQuery] = useState("");
       .catch(err => console.log(err));
   }, [query]);
 
+  const addToUserListHandler = e =>{
+      console.log('add this to my list')
+  }
+
   return (
     <div>
       <form>
@@ -51,7 +55,7 @@ const [query, setQuery] = useState("");
       {data.map(item => (
         
         <div style={{background : 'tomato', margin: '20px', width: '350px', height: '200px'}}>
-            
+            <span onClick={addToUserListHandler} style={{cursor: 'pointer'}}> ⭐️</span>
                       <img alt={item.name.first} src={item.picture.thumbnail} style={{width: '50px', height: '50px'}}/>
 
           <h2>{item.name.first} {item.name.last}</h2>
